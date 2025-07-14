@@ -1,0 +1,60 @@
+1. Download dan Install Python
+Kunjungi https://www.python.org/downloads/
+
+Download dan install versi terbaru Python.
+
+Saat menginstal, jangan lupa centang opsi:
+
+
+
+2. Cek Environment Variable
+Di Windows, klik tombol Search, lalu ketik "Environment Variables".
+
+Klik "Edit the system environment variables".
+
+Pastikan path Python dan Scripts sudah ada, misalnya:
+
+C:\Users\Namamu\AppData\Local\Programs\Python\Python3x\
+
+C:\Users\Namamu\AppData\Local\Programs\Python\Python3x\Scripts\
+
+
+
+3. Buka Folder Project di VS Code
+Buka VS Code, lalu buka folder project kamu.
+
+
+
+4. Buat Virtual Environment
+Tekan tombol Ctrl + Shift + P
+
+Cari dan pilih "Python: Select Interpreter"
+
+Klik "Create Environment"
+
+Pilih:
+
+Environment: venv
+
+Interpreter: Global Python
+
+Klik OK
+→ VS Code akan otomatis membuat folder .venv
+
+
+
+5. Aktifkan Virtual Environment
+Buka Terminal di VS Code (Ctrl + backtick atau menu Terminal > New Terminal)
+
+Ketik perintah ini untuk izin sementara:
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+
+Lalu aktifkan environment:
+.venv\Scripts\activate
+
+
+6. Install Library yang Dibutuhkan
+Ketik perintah ini di terminal:
+pip install flask pandas joblib numpy tensorflow
+
+Tunggu hingga semua selesai diunduh dan terinstal.

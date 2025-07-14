@@ -34,16 +34,17 @@
 
       <div id="map" class="mb-6"></div>
 
-      <form method="POST" class="text-center space-y-4">
+      <form method="POST" class="text-center space-y-4" onsubmit="return validateOrigin()">
         <input type="hidden" id="origin" name="origin" />
         <input
           type="hidden"
           name="destination"
-          value="Darmajaya, Bandar Lampung, Lampung"
+          value="-5.37717,105.24962"
         />
         <button
           type="submit"
           class="bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-6 rounded-lg shadow transition"
+          
         >
           🔍 Hitung Prediksi Waktu
         </button>
@@ -74,6 +75,16 @@
       {% endif %}
     </div>
 
+    <script>
+      function validateOrigin() {
+        const origin = document.getElementById("origin").value;
+        if (!origin) {
+          alert("Silakan pilih lokasi awal terlebih dahulu di peta.");
+          return false;
+        }
+        return true;
+      }
+    </script>
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     <script>
       const map = L.map("map").setView([-5.37717, 105.24962], 13);
